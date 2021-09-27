@@ -109,6 +109,7 @@ use std::{
 mod builder;
 mod maybe_compressed_blob;
 mod prerequisites;
+mod wasm_build_lock;
 mod wasm_project;
 
 pub use builder::{WasmBuilder, WasmBuilderSelectProject};

@@ -21,3 +21,4 @@ walkdir = "2.3.2"
 wasm-gc-api = "0.1.11"
 ansi_term = "0.12.1"
 zstd = { version = "0.6.0", default-features = false }
+fd-lock = "3.0.0"

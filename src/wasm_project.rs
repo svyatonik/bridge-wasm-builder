@@ -575,6 +575,9 @@ fn generate_rerun_if_changed_instructions(
 	project_folder: &Path,
 	wasm_workspace: &Path,
 ) {
+	let mut lock = crate::wasm_build_lock::WasmBuildLock::new();
+	let _lock_guard = lock.lock();
+
 	// Rerun `build.rs` if the `Cargo.lock` changes
 	if let Some(cargo_lock) = find_cargo_lock(cargo_manifest) {
 		rerun_if_changed(cargo_lock);
